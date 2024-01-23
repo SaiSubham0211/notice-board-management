@@ -1,0 +1,10 @@
+<div id="<%= dom_id notice %>">
+  
+  <div class="jumbotron shadow p-5 mb-5 bg-white rounded ">
+      <div class="text-right">Date : <%= notice.date %></div>
+      <div class="text-left">Ref_No : GIETU/2024/<%= notice.Ref_No %></div><br>
+      <center><u><h4 class="display-4">NOTICE</h4></u></center>
+      <p class="lead">Topic : <%= notice.topic %></p>
+      <p><%= simple_format(notice.content) %></p>
+  </div>
+</div>

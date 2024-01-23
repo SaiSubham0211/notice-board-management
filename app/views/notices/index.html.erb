@@ -1,0 +1,26 @@
+
+<div class="container">
+<center><h1>Notices</h1></center>
+<table class="table table-bordered table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th><center>Topic :</center></th>
+      <th>Published Date :</th>
+      <th>Reference No :</th>
+      <th>Link</th>
+
+  </thead>
+
+  <% @notices.each do |notice| %>
+    <div id="<%= dom_id notice %>">
+      <tr>
+        <th><center><%= notice.topic %></center></th>
+        <td><%= notice.date %></td>
+        <td>GIETU/2024/<%= notice.Ref_No %></td>
+        <td><%= link_to "Show this notice", notice, class:"btn btn-outline-success"  %></td>
+      </tr>
+  <% end %>
+
+</table>
+<%= link_to 'Add New Notice', new_notice_path, class: "btn btn-secondary" %>
+</div>
